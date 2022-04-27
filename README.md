@@ -1,6 +1,6 @@
 # Scoree
-'Scoree' is a intuitive basketball scoreboard which based on [electron-react-boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate).
-Bring a laptop or pad to basketball court instead of a bunch of old school stuff, leaving away from score filpper and note book. Even cast your screen to a jumbotron when it avaliable.
+'Scoree' is a intuitive basketball scoreboard which based on [electron-react-boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate).  
+Bring a laptop or pad to basketball court instead of a bunch of old school stuff, leaving away from score filpper and note book. Even cast your screen to a jumbotron when it avaliable.  
 Download app for MacOS or Windows from [Release Page](https://github.com/Shouduo/Scoree/releases).
 Or just check up [online page](https://shouduo.github.io/Scoree/) for temporary use.
 ## Project setup

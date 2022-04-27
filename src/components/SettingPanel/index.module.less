@@ -1,0 +1,118 @@
+.setting-panel-container {
+  position: absolute;
+  left: 50%;
+  transition: transform 0.2s ease;
+  transform: translate(-50%, -48px);
+  z-index: 99;
+  .setting-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: rgba(256, 256, 256, 0.2);
+    border-radius: 0 0 8px 8px;
+    .button {
+      width: 36px;
+      height: 36px;
+      font-size: 18px;
+      border-radius: 50%;
+      background-color: rgba(256, 256, 256, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color:rgba(256, 256, 256, 1);
+      cursor: pointer;
+      &:not(:first-child) {
+        margin-left: 12px;
+      }
+      &:hover {
+        background-color: rgba(256, 256, 256, 0.4);
+      }
+    }
+  }
+}
+
+.setting-dialog-container {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  .setting-section {
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+    :global .ant-input-number-group-wrapper {
+      .ant-input-number-wrapper {
+        border-radius: 8px;
+        overflow: hidden;
+        &:hover {
+          background: rgba(256, 256, 256, 0.4);
+        }
+        .ant-input-number-handler-wrap {
+          background: transparent;
+          .ant-input-number-handler {
+            border: none;
+            background: transparent;
+            span {
+              color: rgba(0, 0, 0, 0.4);
+              font-size: 8px;
+              &:hover {
+                color: rgba(0, 0, 0, 1);
+              }
+            }
+          }
+        }
+        .ant-input-number {
+          font-size: 16px;
+          background: transparent;
+          border: none;
+          box-shadow: none;
+          .ant-input-number-input-wrap {
+            width: 60px;
+            input {
+              height: 48px;
+            }
+          }
+        }
+        .ant-input-number-group-addon {
+          font-size: 16px;
+          background: transparent;
+          border: none;
+        }
+      }
+    }
+    :global .ant-switch {
+      transform: scale(1.5);
+      box-shadow: none;
+      margin: 0 18px;
+      background-color: rgba(0, 0, 0, 0.2);
+      .ant-switch-handle {
+        // height: 24px;
+      }
+      .ant-switch-inner {
+        color:rgba(256, 256, 256, 1);
+      }
+      .ant-click-animating-node {
+        display: none;
+      }
+    }
+    :global .ant-switch-checked {
+      background-color: rgba(256, 256, 256, 0.6);
+      .ant-switch-handle {
+        &::before {
+          // background:rgba(0, 0, 0, 0.2);
+        }
+      }
+      .ant-switch-inner {
+        color:rgba(0, 0, 0, 1);
+      }
+    }
+  }
+}

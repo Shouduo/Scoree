@@ -1,0 +1,81 @@
+.player_list_container{
+  user-select: none;
+  height: 100%;
+  :global .ant-spin-nested-loading {
+    height: 100%;
+    .ant-spin-container{
+      height: 100%;
+      .ant-table{
+        height: 100%;
+        font-size: 24px;
+        background-color: rgba(256, 256, 256, 0.6);
+        border-radius: 8px 8px 0 0;
+        overflow: scroll;
+        .ant-table-container{
+          // height: 100%;
+          .ant-table-thead > tr > th{
+            background-color: transparent;
+            border: none;
+            padding: 12px;
+          }
+          .ant-table-tbody > tr > td{
+            border: none;
+            padding: 12px;
+            &.ant-table-cell-row-hover {
+               background-color: rgba(256, 256, 256, 0.2);
+            }
+          }
+        }
+        .ant-table-footer{
+          background-color: transparent;
+          border: 1px dashed rgba(256, 256, 256, 0.6);
+          opacity: 0.5;
+          padding: 0;
+          cursor: pointer;
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.count-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .count-button {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    // transition: background-color 0.2s ease;
+    &:hover {
+      background-color: rgba(256, 256, 256, 0.2);
+    }
+  }
+}
+
+.editable-row-container{
+  height: 100%;
+  .editable-text{
+    line-height: 2;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 8px;
+  }
+  .editable-text-editing{
+    line-height: 2;
+    outline: none;
+    overflow: hidden;
+    text-overflow: unset;
+    background-color: rgba(256, 256, 256, 0.2);
+    border-radius: 8px;
+  }
+}

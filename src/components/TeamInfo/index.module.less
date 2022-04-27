@@ -1,0 +1,40 @@
+.editable-text {
+  word-wrap: inherit;
+  max-width: 100%;
+  min-width: 50%;
+  font-size: 32px !important;
+  padding: 8px;
+  margin: 0px -8px;
+  border-radius: 8px;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.editing {
+  text-overflow: unset;
+  background-color: rgba(256, 256, 256, 0.2);
+}
+
+.count-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count-button {
+  font-size: 32px !important;
+  // height: 48px;
+  // width: 48px;
+  padding: 8px;
+  margin: 0px -8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(256, 256, 256, 0.2);
+  }
+}

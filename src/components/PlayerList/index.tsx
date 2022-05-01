@@ -184,7 +184,8 @@ const SortableBody = SortableContainer((props) => {
   return <tbody {...props} />;
 });
 
-const SortableTable = ({ side, data }) => {
+const SortableTable = ({ side }) => {
+  const data = useSelector((state) => state.playerData.present[`${side}Players`]);
   const dispatch = useDispatch();
   //
   const onSortEnd = ({ oldIndex, newIndex }) => {

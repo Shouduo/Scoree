@@ -3,18 +3,23 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateGame } from '@/models/gameData';
 import store from '@/models/index';
 import { QUATER_ARRAY } from '@/utils/constant';
+import { sumBy } from 'lodash';
 import tik from '@/assets/sound/tik.mp3';
 import buzz from '@/assets/sound/buzz.mp3';
 import styles from './index.module.less';
 
 const INTERVAL = 0.1 * 1000;
 
-const ScoreBoard = ({ leftScore, rightScore }) => {
+const ScoreBoard = () => {
   const { quater, quaterTime, offenceTime } = useSelector(
     (state) => state.gameData
   );
   const { quaterDuration, quaterCount, offenceDuration, clockBuzzer } =
     useSelector((state) => state.settingData);
+  const playerData = useSelector((state) => state.playerData.present);
+  const leftScore = sumBy(playerData.leftPlayers, 'score');
+  const rightScore = sumBy(playerData.rightPlayers, 'score');
+
   const dispatch = useDispatch();
 
   const [isTimeRunning, setIsTimeRunning] = React.useState(false);
@@ -46,6 +51,7 @@ const ScoreBoard = ({ leftScore, rightScore }) => {
     // console.log(minute, second);
     return `${`${minute}`.padStart(2, '0')}:${`${second}`.padStart(2, '0')}`;
   };
+  //
   const stopTimeRunning = () => {
     setIsTimeRunning(false);
   };

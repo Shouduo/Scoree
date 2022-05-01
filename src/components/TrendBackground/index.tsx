@@ -5,7 +5,7 @@ import { sumBy } from 'lodash';
 import * as colors from '@ant-design/colors';
 
 const TrendBackground = () => {
-  const playerData = useSelector((state) => state.playerData);
+  const playerData = useSelector((state) => state.playerData.present);
   const { leftTeam, rightTeam } = useSelector((state) => state.gameData);
 
   const [homeRatio, setHomeRatio] = React.useState(0.5);

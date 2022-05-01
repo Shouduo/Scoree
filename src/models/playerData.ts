@@ -5,7 +5,6 @@ import { arrayMoveImmutable } from 'array-move';
 import { INITIAL_PLAYER_DATA } from '@/utils/constant';
 import { playerGenerator } from '@/utils/public';
 import * as ls from 'local-storage';
-import undoable from 'redux-undo';
 
 export const playerData = createSlice({
   name: 'playerData',

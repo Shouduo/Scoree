@@ -98,6 +98,8 @@ const SettingPanel = () => {
   const { offenceDuration, quaterDuration } = useSelector(
     (state) => state.settingData
   );
+  const { past } = useSelector((state) => state.playerData);
+
   const dispatch = useDispatch();
   const containerRef = React.useRef<HTMLDivElement>();
   //
@@ -128,13 +130,16 @@ const SettingPanel = () => {
         onMouseLeave={onMouseLeave}
       >
         <div className={styles['setting-panel']}>
-          {/* <div
+          <div
             role="button"
-            className={styles.button}
-            onClick={() => ActionCreators.undo()}
+            className={`${styles.button} ${
+              past.length === 0 && styles['button-disabled']
+            }`}
+            // onClick={() => dispatch(ActionCreators.undo())}
+            onClick={() => dispatch(ActionCreators.undo())}
           >
             <BackwardOutlined />
-          </div> */}
+          </div>
           <div
             role="button"
             className={styles.button}

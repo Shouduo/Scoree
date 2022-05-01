@@ -1,15 +1,10 @@
 import React from 'react';
-import { Button } from 'antd';
-import * as colors from '@ant-design/colors';
 import TrendBackground from '@/components/TrendBackground';
 import Jumbotron from '@/components/Jumbotron';
 import PlayerList from '@/components/PlayerList';
 import SettingPanel from '@/components/SettingPanel';
-import { useSelector, useDispatch } from 'react-redux';
-import { sumBy } from 'lodash';
 
 const IndexPage = () => {
-  const playerData = useSelector((state) => state.playerData);
   return (
     <>
       <SettingPanel />
@@ -26,10 +21,7 @@ const IndexPage = () => {
             alignItems: 'stretch',
           }}
         >
-          <Jumbotron
-            leftScore={sumBy(playerData.leftPlayers, 'score')}
-            rightScore={sumBy(playerData.rightPlayers, 'score')}
-          />
+          <Jumbotron />
           <div
             style={{
               paddingTop: '36px',
@@ -43,10 +35,10 @@ const IndexPage = () => {
             }}
           >
             <div style={{ width: '48%' }}>
-              <PlayerList side="left" data={playerData.leftPlayers} />
+              <PlayerList side="left" />
             </div>
             <div style={{ width: '48%' }}>
-              <PlayerList side="right" data={playerData.rightPlayers} />
+              <PlayerList side="right" />
             </div>
           </div>
         </div>
